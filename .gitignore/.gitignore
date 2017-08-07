@@ -1,0 +1,33 @@
+import java.io.*;
+class blankdeletion
+{
+    public static void main(String args[])throws IOException
+    {
+        InputStreamReader x=new InputStreamReader(System.in);
+        BufferedReader in=new BufferedReader(x);
+        String s,s1,w="";
+        int i,l,p=0;
+        System.out.println("Enter a sentence");
+        s=in.readLine();
+        s1=s;
+        s1=s1.trim();
+        s1=" "+s1+" ";
+        l=s1.length();
+        for(i=1;i<l;i++)
+        {
+           
+            if(s1.charAt(i-1)==' '&& s1.charAt(i)!=' ')
+            p=i;
+           
+               
+            if(s1.charAt(i-1)!=' '&& s1.charAt(i)==' ')
+    
+            w=w+s1.substring(p,i)+" ";
+        } 
+            System.out.println("Original Sentence="+s);
+            System.out.println("Deleted Space one="+w);
+        }
+    }
+
+            
+            
